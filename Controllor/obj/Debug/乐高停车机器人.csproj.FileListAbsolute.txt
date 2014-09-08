@@ -53,3 +53,17 @@ I:\(000 lego UCLA\control for web\obj\Debug\乐高停车机器人.csproj.Generat
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\bin\Debug\乐高停车机器人.exe.config
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.exe
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.pdb
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\bin\Debug\乐高停车机器人.exe
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\bin\Debug\乐高停车机器人.pdb
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\bin\Debug\LibUsbDotNet.dll
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\bin\Debug\MonoBrick.dll
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\bin\Debug\MonoBrickFirmware.dll
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\bin\Debug\MonoBrick.xml
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人_Content.g.cs
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人_MarkupCompile.cache
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.g.resources
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.csproj.GenerateResource.Cache

@@ -21,7 +21,7 @@ namespace Application
         {
             try
             {
-                var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM7");
+                var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM3");
                 //var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("usb");                
 
                 sbyte speed = 0;
