@@ -17,7 +17,6 @@ using MonoBrick.EV3;
 
 using System.Threading;  
 
-
 namespace Application
 {
     public static class Program
@@ -26,7 +25,8 @@ namespace Application
         {
             try
             {
-                var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM3");                
+                var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM3");
+                //var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("usb");                
 
                 //var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("usb");                
 
@@ -56,8 +56,8 @@ namespace Application
                     cmd = Console.ReadLine();
 
 
-                    if(cmd == "run")
-                    {
+                    if(cmd == "run"){
+
                         //brick.MotorC.On(50, 90, true);
                         //WaitForMotorToStop();  
                         //brick.MotorC.Reverse = !brick.MotorC.Reverse; 
