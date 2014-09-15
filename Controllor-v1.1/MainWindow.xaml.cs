@@ -16,7 +16,6 @@ using System.Windows.Shapes;
 using MonoBrick.EV3;
 using System.Threading;  
 
-using MonoBrick.EV3;
 namespace Application
 {
     public static class Program
@@ -25,8 +24,7 @@ namespace Application
         {
             try
             {
-                var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM3");
-                //var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("usb");                
+                var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM3");                
 
                 sbyte speed = 0;
                 sbyte speed2 = 0;
@@ -53,15 +51,15 @@ namespace Application
                 { 
                     cmd = Console.ReadLine();
 
-                    if(cmd == "run"){
+                    if(cmd == "run")
+                    {
                         //brick.MotorC.On(50, 90, true);
                         //WaitForMotorToStop();  
                         //brick.MotorC.Reverse = !brick.MotorC.Reverse; 
                         //brick.MotorC.Brake();
 
                         brick.MotorC.ResetTacho();
-                        brick.MotorC.On(1
-                        0, 90, true);
+                        brick.MotorC.On(10, 90, true);
                         //brick.MotorC.Reverse = !brick.MotorC.Reverse;
                         //brick.MotorC.Brake();
                         
