@@ -15,8 +15,7 @@ using System.Windows.Shapes;
 using MonoBrick.EV3;
 namespace Application
 {
-    public static class 
-        Program
+    public static class Program
     {
         static void Main(string[] args)
         {

@@ -14,7 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using MonoBrick.EV3;
+
 using System.Threading;  
+
 
 namespace Application
 {
@@ -25,6 +27,8 @@ namespace Application
             try
             {
                 var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM3");                
+
+                //var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("usb");                
 
                 sbyte speed = 0;
                 sbyte speed2 = 0;
@@ -41,15 +45,16 @@ namespace Application
 
                 do
                 {
-                    Console.WriteLine("color: " + brick.Sensor1
+                    Console.WriteLine("S3: " + brick.Sensor4
                         .ReadAsString());
                    
                 } while (!true);
-                //brick.Connection.Close();
+                brick.Connection.Close();
 
                 do
                 { 
                     cmd = Console.ReadLine();
+
 
                     if(cmd == "run")
                     {
@@ -74,6 +79,7 @@ namespace Application
                         //brick.MotorC.Brake();
 
                     }
+
                     else if (cmd == "up" || cmd =="u" )
                     {
                         if (speed < 80 && speed > -80)

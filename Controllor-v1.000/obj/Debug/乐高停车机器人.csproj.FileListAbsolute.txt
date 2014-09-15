@@ -67,6 +67,7 @@ C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.g.resources
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\WpfApplication1.Properties.Resources.resources
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\bin\Debug\乐高停车机器人.exe.config
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.exe
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.pdb
@@ -84,3 +85,5 @@ C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\�
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.g.resources
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\WpfApplication1.Properties.Resources.resources
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.csproj.GenerateResource.Cache
+=======
+>>>>>>> parent of f667705... fetch arm add
