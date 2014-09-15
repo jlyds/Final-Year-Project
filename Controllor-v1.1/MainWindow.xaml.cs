@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using MonoBrick.EV3;
+using System.Threading;  
+
+using MonoBrick.EV3;
 namespace Application
 {
     public static class Program
@@ -22,7 +25,7 @@ namespace Application
         {
             try
             {
-                var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM10");
+                var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("COM3");
                 //var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("usb");                
 
                 sbyte speed = 0;
@@ -36,20 +39,44 @@ namespace Application
 
                 string cmd;
 
-                brick.Sensor4 = new ColorSensor(ColorMode.Color);
+                brick.Sensor1 = new ColorSensor(ColorMode.Color);
 
                 do
                 {
-                    Console.WriteLine("S3: " + brick.Sensor4
+                    Console.WriteLine("color: " + brick.Sensor1
                         .ReadAsString());
                    
-                } while (true);
-                brick.Connection.Close();
+                } while (!true);
+                //brick.Connection.Close();
 
                 do
                 { 
                     cmd = Console.ReadLine();
-                    if (cmd == "up" || cmd =="u" )
+
+                    if(cmd == "run"){
+                        //brick.MotorC.On(50, 90, true);
+                        //WaitForMotorToStop();  
+                        //brick.MotorC.Reverse = !brick.MotorC.Reverse; 
+                        //brick.MotorC.Brake();
+
+                        brick.MotorC.ResetTacho();
+                        brick.MotorC.On(1
+                        0, 90, true);
+                        //brick.MotorC.Reverse = !brick.MotorC.Reverse;
+                        //brick.MotorC.Brake();
+                        
+                    }
+
+
+                    else if (cmd == "back")
+                    {
+                        brick.MotorC.ResetTacho();
+                        brick.MotorC.On(-10, 90, true);
+                        //brick.MotorC.Reverse = !brick.MotorC.Reverse;
+                        //brick.MotorC.Brake();
+
+                    }
+                    else if (cmd == "up" || cmd =="u" )
                     {
                         if (speed < 80 && speed > -80)
                             speed = (sbyte)(speed + 10);

@@ -67,3 +67,6 @@ C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.g.resources
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\WpfApplication1.Properties.Resources.resources
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停车机器人.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\bin\Debug\乐高停车机器人.exe.config
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.exe
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.pdb
