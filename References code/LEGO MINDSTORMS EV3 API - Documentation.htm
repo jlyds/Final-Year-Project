@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://legoev3.codeplex.com/documentation -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="Chrome" prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta id="CompatabilityMode" http-equiv="X-UA-Compatible" content="IE=edge">
+	    
+        <link href="./LEGO MINDSTORMS EV3 API - Documentation_files/StyleSheet.ashx" id="MasterCss" rel="stylesheet" type="text/css">
+        <link rel="SHORTCUT ICON" href="https://www.codeplex.com/favicon.ico">
+        <title>LEGO MINDSTORMS EV3 API - Documentation</title>
+        
+        <!--
+        Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code,
+        not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.
+        -->
+        <script type="text/javascript" src="./LEGO MINDSTORMS EV3 API - Documentation_files/ai.js" async=""></script><script src="./LEGO MINDSTORMS EV3 API - Documentation_files/jquery-1.4.4.min.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            if (typeof jQuery === 'undefined') {
+                document.write(unescape("%3Cscript src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <script src="./LEGO MINDSTORMS EV3 API - Documentation_files/jquery-ui.min.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            if (typeof jQuery.ui === 'undefined') {
+                document.write(unescape("%3Cscript src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+
+        
+            <script type="text/javascript">
+                var appInsights = { queue: [], start: function (n) { function r(n, t) { n[t] = function () { var i = arguments; n.queue.push(function () { n[t].apply(n, i) }) } } var t, i; this.applicationInsightsId = n; this.accountId = null; this.appUserId = null; r(this, "logEvent"); r(this, "logPageView"); t = document.createElement("script"); t.type = "text/javascript"; t.src = "//az416426.vo.msecnd.net/scripts/ai.js"; t.async = !0; i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(t, i) } };
+                appInsights.start("f5504185-cb9a-4174-95ba-928e1ac1492c");
+                
+                appInsights.logPageView();
+            </script>
+        
+    <style type="text/css">.SideBar, .SideBarPadding{display:none;}.MainContent{width:auto;}.SiteContentTable{width:100%;}</style>
+    <style id="ProjectStyles" type="text/css">
+        .SiteHeader, .SiteHeaderLeft {
+            height:45px !important;
+            overflow:hidden;
+        }
+        .SiteContent 
+        {
+            padding: 0 0 1em 0;
+            margin-top:0;
+            min-height:225px;
+            border-right: 1px solid lightgrey;
+            border-left: 1px solid lightgrey;
+            border-bottom: 1px solid lightgrey;
+        }
+        .IE table.MinWidthContent
+        {
+	        table-layout: auto !important;	
+        }
+    </style>
+    
+    
+    <style type="text/css">.ProjectContent{padding:0;}</style>
+    <style type="text/css">
+        .WikiHolder
+        {
+            margin: 0 1em 0 0;
+        }
+        #WikiContent
+        {
+            margin-top: 15px;
+        }
+        #WikiBreadCrumbs
+        {
+            margin: 0.25em 0 1em 0;
+        }
+        .SecondarySearchButton 
+        {
+            margin:0 0 0 -0.6em;
+        }
+        .FF .SecondarySearchButton 
+        {
+            margin:-0.1em 0 0 -0.5em;
+            height: 22px;
+        }
+        .IE .SecondarySearchButton
+        {
+            width: 22px;
+            height: 22px;
+        }
+    </style>
+    
+    
+    
+    
+    <meta id="WTProjectName" name="WT.pi" content="EV3">
+    
+
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://legoev3.codeplex.com/rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" title="WLWManifest" href="https://www.codeplex.com/wlwmanifest.xml">
+    
+    
+        <link rel="alternate" type="application/rss+xml" title="LEGO MINDSTORMS EV3 API" url="https://legoev3.codeplex.com/project/feeds/rss">
+    
+        
+        <link rel="alternate" type="application/rss+xml" title="LEGO MINDSTORMS EV3 API - Discussions" url="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fforum%2flegoev3">
+        
+        <link rel="alternate" type="application/rss+xml" title="LEGO MINDSTORMS EV3 API - Issues" url="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fworkitem%2flegoev3">
+        
+        <link rel="alternate" type="application/rss+xml" title="LEGO MINDSTORMS EV3 API - Downloads" url="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2frelease%2flegoev3">
+        <link rel="alternate" type="application/rss+xml" title="LEGO MINDSTORMS EV3 API - Reviews" url="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2freview%2flegoev3">
+        
+    
+        <link rel="alternate" type="application/rss+xml" title="LEGO MINDSTORMS EV3 API - Source code" url="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fsourcecontrol%2flegoev3">
+        <link rel="alternate" type="application/rss+xml" title="LEGO MINDSTORMS EV3 API - Wiki" url="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fwiki%2flegoev3">
+    
+        
+    
+        <meta content="summary" name="twitter:card"><meta content="@CodePlex" name="twitter:site"><meta content="https://legoev3.codeplex.com/documentation?ProjectName=legoev3" name="twitter:url"><meta content="LEGO MINDSTORMS EV3 API" name="twitter:title"><meta content="API for the LEGO Mindstorms EV3 brick usable from desktop, Windows Phone and WinRT." name="twitter:description"><meta content="https://www.codeplex.com/Images/codeplex.png" name="twitter:image"><meta content="CodePlex" property="og:site_name"><meta content="https://legoev3.codeplex.com/documentation?ProjectName=legoev3" property="og:url"><meta content="object" property="og:type"><meta content="LEGO MINDSTORMS EV3 API" property="og:title"><meta content="API for the LEGO Mindstorms EV3 brick usable from desktop, Windows Phone and WinRT." property="og:description"><meta content="https://www.codeplex.com/Images/codeplex.png" property="og:image">
+        
+
+    </head>
+    
+    <body class=" NoImages">
+        <script src="./LEGO MINDSTORMS EV3 API - Documentation_files/ScriptLoader.ashx" type="text/javascript"></script><script type="text/javascript" src="./LEGO MINDSTORMS EV3 API - Documentation_files/analyticsid.aspx"></script>
+        <form id="aspnetForm" autocomplete="off" method="POST" enctype="multipart/form-data">
+            <input name="__RequestVerificationToken" type="hidden" value="101TzFFt0-a7O-XHjSJmnxDOX1ch6_PosNUhLhna7U2-Gz9qx5CeSrOfO16EjOEmkogW90CFMa1kkQ5fcPksVxx7x8fM4Al93cmvojY6dq8I-myqr9RGyMRo_t8uQPr72d-kbQ2"><input name="__RequestVerificationToken2" type="hidden" value="__RequestVerificationToken27896d3eb-87bd-4d9c-bd41-7746ac885929">
+            
+            
+            
+            <div style="display:none;">
+                
+                <img id="BlankImage" style="width:0;height:0;" src="./LEGO MINDSTORMS EV3 API - Documentation_files/blank.png" onload="self.logoImageLoaded=true;">
+
+                <script language="javascript" type="text/javascript">
+                    var date = new Date();
+                    var timezoneOffset = date.getTimezoneOffset() / 60 * -1;
+                    var timezoneOffsetCookie = getCookie("TimezoneOffset");
+                    var firstTimeSetTimezoneCookie = false;
+
+                    if (timezoneOffsetCookie == null || timezoneOffsetCookie != timezoneOffset) {
+                        firstTimeSetTimezoneCookie = true;
+                        document.cookie = "TimezoneOffset=" + timezoneOffset + '; domain=.codeplex.com;expires=Mon, 14 Sep 2015 22:57:21 UTC';
+                    }
+                </script>
+                
+                
+                    <noscript>
+                        &lt;a href="http://www.omniture.com" title="Web Analytics"&gt;&lt;img src="https://msstonojstemp.112.2O7.net/b/ss/msstonojstemp/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /&gt;&lt;/a&gt;
+                    </noscript>
+                
+            </div>
+            
+            <div id="header">
+                <div id="header_wrap" class="row">
+                    <p id="logo"><a href="https://www.codeplex.com/">Code<span class="semi">Plex</span></a><span id="tagline">Project Hosting for Open Source Software</span></p>
+                    
+
+<ul id="nav">
+
+    <li><a href="https://www.codeplex.com/site/register/new" id="registerLink" class="ZoomFix">Register</a></li>
+    <li><a class="SignInLink" href="https://www.codeplex.com/site/login?RedirectUrl=https%3a%2f%2flegoev3.codeplex.com%2fdocumentation" id="signInLink">Sign In</a></li>
+  
+    <li class="last"><a class="rss_site_icon" href="https://www.codeplex.com/site/feeds/rss" type="application/rss+xml" rel="Alternate" title="CodePlex Site Activity"></a></li>
+</ul>
+                    <input id="searchsite" name="searchsite" maxlength="500" type="text" value="" autocomplete="off" title="Search all projects" style="color: rgb(170, 170, 170); font-style: italic;"><span id="search_mag"><a id="submitSearch" name="submitSearch" class="magnify" title="Search all projects" href="https://legoev3.codeplex.com/documentation#"></a></span>
+                    <script>
+	$(document).ready(function() {
+    var searchButton = $('#submitSearch'),
+        searchBar = $('#searchsite');
+
+    // Register our own handler for the search event while we wait for the SearchBox script to load.
+    searchButton.bind('click.backupSearchBox', doProjectSearch);
+    searchBar.bind('keypress.backupSearchBox', function(e) { if ($keyCode(e) === 13) { doProjectSearch(); return false; } });
+
+    function cleanupSearchEvents() {
+        // If the SearchBox was loaded, unregister our handlers.
+        if (epx_loaded) {
+            searchButton.unbind('.backupSearchBox');
+            searchBar.unbind('.backupSearchBox');
+        }
+    }
+
+    $loadScript('https://services.social.microsoft.com/search/Widgets/SearchBox.jss?appid=1000&scopeid=1&boxId=searchsite&btnId=submitSearch&watermark=Search%20all%20projects&overrideWatermark=true&searchLocation=https%3a%2f%2fwww.codeplex.com%2fsite%2fsearch&allowEmptySearch=true&focusOnInit=False&minimumTermLength=3', cleanupSearchEvents);
+})
+function doProjectSearch() {
+    
+    var url = 'https://www.codeplex.com/site/search';
+
+    //If search term is not same as watermark
+    if($('#searchsite').val() != 'Search all projects')    
+    {        
+        url = url + '?query=' + encodeURIComponent($('#searchsite').val());
+    }
+
+    
+    var callback = '';
+    if (callback.length > 0 && eval('typeof ' + callback) != 'undefined')
+        url += eval(callback + '()');
+
+    window.location.href = url;
+    return false;
+}
+</script>
+                <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; color: rgb(122, 132, 142); font-family: &#39;Segoe UI&#39;, &#39;Microsoft Sans Serif&#39;, Arial, Geneva, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></div>
+            </div>
+            
+            <div id="wrap">
+                
+    <div id="sub_heading" class="row">
+        
+        <div id="ProjectHeader">
+            <div id="project_title_row" class="row">
+                <div id="project_logo">
+                    
+    
+    <h1 class="text_only"><a href="https://legoev3.codeplex.com/" id="ProjectTitle1"><div>LEGO MINDSTORMS EV3 API</div></a></h1>
+
+                </div>
+            </div>
+        </div>
+        
+        <div id="ProjectDetailsDiv">
+            
+        </div>
+		<div class="clear"></div>
+        
+
+<ul id="page_box_links">
+	<li id="homeTabCell" style="width: 75px;"><a id="homeTab" href="https://legoev3.codeplex.com/" class="box_home">home</a><div></div></li>
+    
+	<li id="sourceTabCell" style="width: 125px;"><a id="sourceTab" href="https://legoev3.codeplex.com/SourceControl/latest" class="box_source">source code</a><div></div></li>
+    
+	<li id="releasesTabCell" style="width: 117px;"><a id="releasesTab" href="https://legoev3.codeplex.com/releases/view/114257" class="box_downloads">downloads</a><div></div></li>
+    
+    <li id="documentationTabCell" style="width: 155px;"><a id="documentationTab" href="./LEGO MINDSTORMS EV3 API - Documentation_files/LEGO MINDSTORMS EV3 API - Documentation.htm" class="documentation_active">documentation</a><div></div></li>
+    
+	<li id="discussionTabCell" style="width: 124px;"><a id="discussionTab" href="https://legoev3.codeplex.com/discussions" class="box_discussions">discussions</a><div></div></li>
+    
+	<li id="workItemsTabCell" style="width: 82px;"><a id="workItemsTab" href="https://legoev3.codeplex.com/workitem/list/basic" class="box_issue">issues</a><div></div></li>
+    
+	<li id="peopleTabCell" style="width: 82px;"><a id="peopleTab" href="https://legoev3.codeplex.com/team/view" class="box_people">people</a><div></div></li>
+	<li id="licenseTabCell" style="width: 82px;" class="last"><a id="licenseTab" href="https://legoev3.codeplex.com/license" class="box_license">license</a><div></div></li>
+    
+    <span class="stretch"></span>
+</ul>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#page_box_links').applyLastClassToList();
+    });
+</script>
+		    <div class="clear"></div>
+            
+    <div id="DeleteWikiPagePanel" class="modal" style="display: none;">
+        <div class="row">
+            <h2>Are you Sure? <a href="javascript:return false;" class="close">X</a></h2>
+        </div>
+        <div class="modal_info">
+            By clicking Delete, all history, comments and attachments for this page will be deleted and cannot be restored.
+            <div class="modal_buttons">
+                <input type="button" id="CancelButton" class="cancel" value="Cancel">
+                <input type="button" id="DeleteButton" class="ok" value="Delete">
+            </div>
+            <div class="ClearBoth"></div>
+        </div>
+    </div>
+    
+    <div id="homepage_sub_menu">
+		<ul class="page_box_sublinks">
+            
+                <li><a id="pageInfoHyperLink" href="https://legoev3.codeplex.com/wiki/PageInfo?title=Documentation" title="Page information for Documentation page.">Page Info</a></li>
+            
+            <li class="last"><a id="changesHyperlink" href="https://legoev3.codeplex.com/wikipage/history" title="View change history for all pages.">Change History (all pages)</a></li>
+		</ul>
+        
+
+<div>
+    
+    <div id="actionBar" class="action_bar">
+        <ul id="actionBar_ul" class="actionBar_sublinks subtab_right" style="vertical-align: middle;">
+
+            
+
+                <li id="li_actionbar_followproject" data-action-id="actionbar_followproject" data-action-type="None" class="actionBar_sublinks" data-options-id="e9828ba2-d908-4d79-85b2-d4940fac1f99">
+                
+                     
+                    
+                    <div class="actionBar_custom_content"></div>
+
+                    <a href="https://legoev3.codeplex.com/documentation#" id="actionbar_followproject" title="Follow this project to get updates in your activity stream." class="action_bar_item_link"><img id="img_actionbar_followproject" class="action_bar_item_image" src="./LEGO MINDSTORMS EV3 API - Documentation_files/actionbar_follow.png" style="vertical-align: middle"> Follow (53)</a>
+
+                </li>
+
+            
+
+                <li id="li_actionbar_subscribe" data-action-id="actionbar_subscribe" data-action-type="PopUp" class="actionBar_sublinks last" data-options-id="e9c75ec5-f432-4ce5-a6f3-e5689991774c">
+                
+                    <script class="options" defer="defer" id="e9c75ec5-f432-4ce5-a6f3-e5689991774c" type="application/json">{}</script> 
+                    
+                    <div class="actionBar_custom_content">
+
+<div id="rssHoverDiv" class="HoverPanel LeftHoverWidth" style="display: none">
+        <ul id="3_FeedsPanel" class="RssFeedsPanel">
+            <li>
+                <a id="ProjectRssLink" href="https://legoev3.codeplex.com/project/feeds/rss" class="ArrowSmall NoUnderline">All Project Updates</a>
+            </li>
+            
+            <li>
+                <a id="DiscussionRssLink" href="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fforum%2flegoev3" class="ArrowSmall NoUnderline">Discussions</a>
+            </li>
+            
+            <li>
+                <a id="IssueTrackerRssLink" href="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fworkitem%2flegoev3" class="ArrowSmall NoUnderline">Issue Tracker</a>
+            </li>
+            
+            <li>
+                <a id="ReleasesRssLink" href="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2frelease%2flegoev3" class="ArrowSmall NoUnderline">Downloads</a>
+            </li>
+            <li>
+                <a id="ReviewsRssLink" href="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2freview%2flegoev3" class="ArrowSmall NoUnderline">Reviews</a>
+            </li>
+            
+            <li>
+                <a id="SourceControlRssLink" href="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fsourcecontrol%2flegoev3" class="ArrowSmall NoUnderline">Source Code</a>
+            </li>
+            <li>
+                <a id="WikiRssLink" href="https://legoev3.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fwiki%2flegoev3" class="ArrowSmall NoUnderline">Wiki &amp; Documentation</a>
+            </li>
+        </ul>
+</div></div>
+
+                    <a href="https://legoev3.codeplex.com/documentation#" id="actionbar_subscribe" title="Subscribe to project updates in RSS feeds." class="action_bar_item_link">
+                        <img id="img_actionbar_subscribe" class="action_bar_item_image" src="./LEGO MINDSTORMS EV3 API - Documentation_files/actionbar_subscribe.png" style="vertical-align: middle">
+                        Subscribe
+                    </a>
+
+                </li>
+
+            
+        </ul>
+    </div>
+</div>
+        <div class="clear"></div>
+    </div>
+    
+        
+
+    </div>
+    
+    
+    
+<div id="left_column" class="no_border">
+    
+
+    <div class="WikiHolder">
+
+        
+            <div id="WikiContent" class="WikiContent">
+                
+<div class="wikidoc">
+<h1>Getting Started Guide</h1>
+<h2>Index</h2>
+<ul>
+<li><a href="https://legoev3.codeplex.com/documentation#GettingStarted">Getting Started</a> </li><li><a href="https://legoev3.codeplex.com/documentation#Pairing">Pairing the Brick</a> </li><li><a href="https://legoev3.codeplex.com/documentation#References">References</a> </li><li><a href="https://legoev3.codeplex.com/documentation#Creating">Creating a Brick Object</a> </li><li><a href="https://legoev3.codeplex.com/documentation#Events">Events and Ports</a> </li><li><a href="https://legoev3.codeplex.com/documentation#Connecting">Connecting to the Brick</a> </li><li><a href="https://legoev3.codeplex.com/documentation#Direct">Direct, System, and Batch Commands</a>
+<ul>
+<li><a href="https://legoev3.codeplex.com/documentation#Motors">Motors</a> </li><li><a href="https://legoev3.codeplex.com/documentation#Sensors">Sensors</a> </li><li><a href="https://legoev3.codeplex.com/documentation#System">System Commands</a> </li><li><a href="https://legoev3.codeplex.com/documentation#Batch">Batch Commands</a></li></ul>
+</li><li><a href="https://legoev3.codeplex.com/documentation#WinRT">WinRT Permissions</a> </li><li><a href="https://legoev3.codeplex.com/documentation#Phone">Phone Permissions</a> </li><li><a href="https://legoev3.codeplex.com/documentation#MoreInfo">More Information</a> </li><li><a href="https://legoev3.codeplex.com/documentation#KnownIssues">Known Issues</a></li></ul>
+<br>
+<b>Please note that this library requires firmware v1.03H or higher to be installed on the brick. You can install this firmware with the LEGO MINDSTORMS desktop software from the Tools -&gt; Firmware Update menu item.</b><br>
+<br>
+<a name="GettingStarted"></a>
+<h2>Getting Started</h2>
+This project contains libraries for Windows desktop (WinForms, WPF, Console, etc.), Windows Phone 8, and WinRT (Windows 8.1 and higher). You will also find several tester and sample applications that demonstrate the library in action and how to use it in your
+ own applications. In addition, here are some quick examples to get you started...<br>
+<br>
+<a name="Pairing"></a>
+<h2>Pairing the Brick</h2>
+The LEGO EV3 brick can be connected via USB (except for Windows Phone), Bluetooth or WiFi.
+<br>
+<h3>Bluetooth</h3>
+To enable Bluetooth on the brick, navigate to the Settings tab (the wrench icon) and select Bluetooth. Make sure the Visibility and Bluetooth items are both checked as shown:<br>
+<br>
+<img src="./LEGO MINDSTORMS EV3 API - Documentation_files/Download" alt="bluetoothbrick.jpg" title="bluetoothbrick.jpg"><br>
+<br>
+The pairing process via Bluetooth will be different with each platform. In summary, you will need to open your Bluetooth settings, search for devices, find the one named EV3, pair, entering the code 1234 when prompted, and the devices should pair.<br>
+<h3>WiFi</h3>
+WiFi is not built in to the EV3 brick. The only adapter that is compatible and supported is the NETGEAR N150 USB device (WNA1100), which can be plugged into the USB port on the side of the brick. You can also configure WiFi by opening the desktop MINDSTORMS
+ software, starting a project, and configuring by clicking on the wrench icon in the lower right of the screen, selecting your access point, clicking the Connect button, and configuring the password:<br>
+<br>
+<img src="./LEGO MINDSTORMS EV3 API - Documentation_files/Download(1)" alt="wifidesktop.png" title="wifidesktop.png"><br>
+<br>
+You can also do this via the brick itself from the WiFi section under the Settings tab. Once enabled and connected, you will be able to determine the brick's IP address by selecting the current connection in the list of connections on the brick.<br>
+<br>
+<img src="./LEGO MINDSTORMS EV3 API - Documentation_files/Download(2)" alt="connection.jpg" title="connection.jpg"><br>
+<br>
+<img src="./LEGO MINDSTORMS EV3 API - Documentation_files/Download(3)" alt="ip.jpg" title="ip.jpg"><br>
+<br>
+<a name="References"></a>
+<h2>References</h2>
+First off, you will need to set a reference to the appropriate library for the application type you're creating. You can find the library and set a reference easily using NuGet. The three libraries are named:
+<ul>
+<li>Lego.Ev3.Desktop </li><li>Lego.Ev3.Phone </li><li>Lego.Ev3.WinRT</li></ul>
+<br>
+<a name="Creating"></a>
+<h2>Creating a Brick object</h2>
+With the reference set, you can create a Brick object and start communicating with the physical EV3 brick. However, you will also need to pass an instance of an object that implements the
+<i>ICommunication</i> interface to the Brick constructor, which will determine how the library will talk to the brick. Here are the options:<br>
+<ul>
+<li>Desktop
+<ul>
+<li>BluetoothCommunication (requires the COM port the brick is hosted on while paired)
+</li><li>UsbCommunication </li><li>NetworkCommunication (requires the IP address of the brick)</li></ul>
+</li><li>Phone
+<ul>
+<li>BluetoothCommunication </li><li>NetworkCommunication (requires the IP address of the brick)</li></ul>
+</li><li>WinRT
+<ul>
+<li>BluetoothCommunication </li><li>UsbCommunication </li><li>NetworkCommunication (requires the IP address of the brick)</li></ul>
+</li></ul>
+<br>
+The following snippet of code will create a new Brick object communicating over USB:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre>Brick brick = <span style="color:Blue">new</span> Brick(<span style="color:Blue">new</span> UsbCommunication());
+</pre>
+</div>
+<br>
+<a name="Events"></a>
+<h2>Events and Ports</h2>
+The Brick object contains a BrickChanged event. You can hook this event to receive a notification every time some property on the brick changes. For example, when someone presses a button on the brick face, the value of a sensor changes, a sensor/motor is added/removed,
+ etc. <br>
+<br>
+The Brick also has a dictionary collection of Port objects. These map to the physical ports on the EV3 brick. You can get the type/value/mode/etc. of anything plugged into any port at any time. Or you can use the event.<br>
+<br>
+You can hook the event as follows:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre>brick.BrickChanged += OnBrickChanged;
+
+...
+
+<span style="color:Blue">void</span> OnBrickChanged(<span style="color:Blue">object</span> sender, BrickChangedEventArgs e)
+{
+    <span style="color:Green">// print out the value of the sensor on Port 1 (more on this later...)</span>
+    Debug.WriteLine(e.Ports[InputPort.One].SIValue);
+}
+</pre>
+</div>
+<br>
+Or, to get the value of the sensor on Port 1 at any time, just use the Ports collection:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre>Debug.WriteLine(brick.Ports[InputPort.One].SIValue);
+</pre>
+</div>
+<br>
+<a name="Connecting"></a>
+<h2>Connecting to the Brick</h2>
+Once the Brick is created and the event is hooked (or not), it's time to connect to the brick. This is done using the
+<i>ConnectAsync</i> method. By default, this will setup a timer which will poll the brick for data every 100 milliseconds. If you wish to poll more quickly or slowly, you can pass in a
+<i>TimeSpan</i> object for the polling time you require. Or, to disable polling altogether, use the
+<i>TimeSpan.Zero</i> constant. Here's how to connect:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre>await brick.ConnectAsync();
+</pre>
+</div>
+<br>
+<a name="Direct"></a>
+<h2>Direct, System, and Batch Commands</h2>
+There are 3 types of commands that can be sent to the brick:<br>
+<br>
+<b>DirectCommand</b> - these commands are "one off" commands and are executed immediately. These are great if you only need to do a single operation at a time, but can be very slow when calling a series of them in very quick succession. In this case
+ you'd want to use...<br>
+<b>BatchCommand</b> - these commands are queued up until the <i>SendCommandAsync</i> method is called, at which point the entire queue is sent in a single packet and executed.<br>
+<b>SystemCommand</b> - these commands are also "one off" but cannot be batched. These commands are for uploading files and other system-level functions.<br>
+<br>
+You will find these inside of the Brick object as <i>DirectCommand</i>, <i>BatchCommand</i> and
+<i>SystemCommand</i> properties, each of which contains their corresponding methods.<br>
+<br>
+<a name="Motors"></a>
+<h2>Motors</h2>
+Up to 4 motors can be hooked up to the ABCD ports on the EV3 brick. There are a variety of methods to interact with the motors which you can find in the API documentation. As an example, here is a
+<i>DirectCommand</i> which will turn the motor on Port A for 5 seconds at 50% power:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre>await brick.DirectCommand.TurnMotorAtPowerAsync(OutputPort.A, 50, 5000);
+</pre>
+</div>
+<br>
+<a name="Sensors"></a>
+<h2>Sensors</h2>
+Up to 4 sensors can be hooked up to the 1234 ports on the EV3 brick. Additionally, each motor also acts as a sensor and can return positional/rotational data. Each sensor/motor may also have the ability to return its data in a variety of different modes. For
+ example, the Touch sensor can return whether the button is pressed, or it can return the number of times it has been pressed since it was last reset. To set the mode of a port, use the SetMode method as shown:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre><span style="color:Green">// assuming a Touch sensor is installed on Port 1, set it to return</span>
+<span style="color:Green">// the number of presses, not whether it is pressed</span>
+brick.Ports[InputPort.One].SetMode(TouchMode.Bumps);
+</pre>
+</div>
+<br>
+Sensor data is also returned in 3 different formats: Raw, SI (International System of Units), and Percentage. In most cases, the SI value is the one you want to use:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre><span style="color:Green">// print the current value of the sensor plugged into Port 1</span>
+Debug.WriteLine(brick.Ports[InputPort.One].SIValue);
+</pre>
+</div>
+<br>
+<a name="System"></a>
+<h2>System Commands</h2>
+System commands can be used to upload files, delete files, etc. Here's an example to upload a sound file from your PC to a specific location on the brick:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre>await brick.SystemCommand.CopyFileAsync(<span style="color:#A31515">"Overpower.rsf"</span>, <span style="color:#A31515">"../prjs/Tester/Overpower.rsf"</span>);
+</pre>
+</div>
+<br>
+<a name="Batch"></a>
+<h2>Batch Commands</h2>
+Here is an example of a Batch command to set the speed of one motor to 50%, the power of a second motor to 50%, and play an audio tone:<br>
+<br>
+<div style="color:Black; background-color:White">
+<pre>brick.BatchCommand.TurnMotorAtSpeedForTime(OutputPort.A, 50, 1000, <span style="color:Blue">false</span>);
+brick.BatchCommand.TurnMotorAtPowerForTime(OutputPort.C, 50, 1000, <span style="color:Blue">false</span>);
+brick.BatchCommand.PlayTone(50, 1000, 500);
+await brick.BatchCommand.SendCommandAsync();
+</pre>
+</div>
+<br>
+<a name="WinRT"></a>
+<h2>WinRT Permissions</h2>
+When creating a WinRT application which uses this library, certain capabilities must be added to the application manifest file. To do this, open the
+<i>package.appxmanifest</i> file in the XML editor and add the following to the <i>
+Capabilities</i> section, based on the type of communication you will be using (any or all can be used at once):<br>
+<br>
+<b>Bluetooth</b><br>
+<div style="color:Black; background-color:White">
+<pre><span style="color:Blue">&lt;</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">DeviceCapability</span> <span style="color:Red">Name</span><span style="color:Blue">=</span><span style="color:Black">"</span><span style="color:Blue">bluetooth.rfcomm</span><span style="color:Black">"</span><span style="color:Blue">&gt;</span>
+    <span style="color:Blue">&lt;</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">Device</span> <span style="color:Red">Id</span><span style="color:Blue">=</span><span style="color:Black">"</span><span style="color:Blue">any</span><span style="color:Black">"</span><span style="color:Blue">&gt;</span>
+        <span style="color:Blue">&lt;</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">Function</span> <span style="color:Red">Type</span><span style="color:Blue">=</span><span style="color:Black">"</span><span style="color:Blue">name:serialPort</span><span style="color:Black">"</span> <span style="color:Blue">/&gt;</span>
+    <span style="color:Blue">&lt;/</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">Device</span><span style="color:Blue">&gt;</span>
+<span style="color:Blue">&lt;/</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">DeviceCapability</span><span style="color:Blue">&gt;</span>
+</pre>
+</div>
+<br>
+<b>USB</b><br>
+<div style="color:Black; background-color:White">
+<pre><span style="color:Blue">&lt;</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">DeviceCapability</span> <span style="color:Red">Name</span><span style="color:Blue">=</span><span style="color:Black">"</span><span style="color:Blue">humaninterfacedevice</span><span style="color:Black">"</span><span style="color:Blue">&gt;</span>
+    <span style="color:Blue">&lt;</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">Device</span> <span style="color:Red">Id</span><span style="color:Blue">=</span><span style="color:Black">"</span><span style="color:Blue">vidpid:0694 0005</span><span style="color:Black">"</span><span style="color:Blue">&gt;</span>
+        <span style="color:Blue">&lt;</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">Function</span> <span style="color:Red">Type</span><span style="color:Blue">=</span><span style="color:Black">"</span><span style="color:Blue">usage:ff00 0001</span><span style="color:Black">"</span> <span style="color:Blue">/&gt;</span>
+    <span style="color:Blue">&lt;/</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">Device</span><span style="color:Blue">&gt;</span>
+<span style="color:Blue">&lt;/</span><span style="color:#A31515">m2</span><span style="color:Blue">:</span><span style="color:#A31515">DeviceCapability</span><span style="color:Blue">&gt;</span>
+</pre>
+</div>
+<br>
+<b>Network</b> (note that this one CAN be set from the manifest editor UI)<br>
+<div style="color:Black; background-color:White">
+<pre><span style="color:Blue">&lt;</span><span style="color:#A31515">Capability</span> <span style="color:Red">Name</span><span style="color:Blue">=</span><span style="color:Black">"</span><span style="color:Blue">privateNetworkClientServer</span><span style="color:Black">"</span> <span style="color:Blue">/&gt;</span>
+</pre>
+</div>
+<br>
+<a name="Phone"></a>
+<h2>Windows Phone Permissions</h2>
+When creating a WinRT application which uses this library, certain capabilities must be added to the application manifest file. To do this, open the WMAppManifest.xml and add the following capabilities:
+<ul>
+<li>ID_CAP_PROXIMITY (for BluetoothConnection) </li><li>ID_CAP_NETWORKING (for NetworkConnection)</li></ul>
+<br>
+<a name="MoreInfo"></a>
+<h2>More Information</h2>
+Check out the Getting Started video:<br>
+<br>
+<div style="text-align:Left"><span></span><br>
+<span><a href="https://channel9.msdn.com/posts/LEGO-Mindstorms-EV3-API" target="_blank">Launch in another window</a></span></div>
+<br>
+<br>
+<a name="KnownIssues"></a>
+<h2>Known Issues</h2>
+<h3>v1.0</h3>
+<ul>
+<li>WinRT documentation is currently missing but will be provided once we can properly build it. In the mean time, refer to the Desktop and Phone documentation which is 99.9% identical.
+</li><li>An exception may be thrown when connecting/disconnecting rapidly via Bluetooth on Phone and WinRT.
+</li><li>USB communication with the Desktop library is a bit laggy. </li><li>When using Bluetooth on WinRT, the brick must be named the default "EV3".
+</li><li>The library can only be used with a single brick at a time. Multiple brick communication is not supported.</li></ul>
+</div>
+<div></div>
+
+            </div>
+        
+                <p>Last edited <span class="smartDate" title="3/31/2014 4:31:51 PM" localtimeticks="1396308711">Mar 31 at 4:31 PM</span> by <a id="wikiEditByLink" href="https://www.codeplex.com/site/users/view/peekb">peekb</a>, version 24</p>
+            
+    </div>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#deleteWikiHyperLink').click(function () {
+                OpenDialog('#DeleteWikiPagePanel', true, '30em');
+            });
+            $('#DeleteButton').click(function () {
+                OpenDialog('#DeleteWikiPagePanel', false);
+                CodePlex.UpdateProgress.show();
+                $.ajax({
+                    type: 'DELETE',
+                    url: 'https://legoev3.codeplex.com/documentation',
+                    data: {title: $('#WikiTitle').val()},
+                    success: function (data) {
+                        CodePlex.UpdateProgress.hide();
+                        window.location = data;
+                    },
+                    error: function (data) {
+                        CodePlex.UpdateProgress.hide();
+                    }
+                });
+            });
+            $('#CancelButton').click(function () {
+                OpenDialog('#DeleteWikiPagePanel', false);
+            });
+            
+            
+        });
+    </script>
+</div>
+
+        
+	<div id="right_sidebar">
+        
+
+<input name="" type="text" maxlength="500" id="wiki_search" title="Search Wiki and Documentation" class="EmptyTextBox"><a id="SearchButton" class="wiki_magnify" href="https://legoev3.codeplex.com/documentation#" title="Search Wiki and Documentation"></a>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        $('#wiki_search').keypress(function (e) {
+            if (e.keyCode == 13) {
+                wikiSearch();
+                return false;
+            }
+        });
+
+        $('#SearchButton').click(function () {
+            wikiSearch();
+            return false;
+        });
+
+        $('#wiki_search').promptBox('Search Wiki & Documentation');
+
+    });
+    function setWikiCommentTextBoxFocus() {
+        $('#Comment').focus();
+        return false;
+    }
+
+    function wikiSearch() {
+        var $textbox = $('#wiki_search');
+        if($textbox.attr('dirty') != 'true')
+            return;
+        var searchText = encodeURIComponent(jQuery.trim($textbox.val()));
+        if(searchText != null & searchText.length > 0)
+            window.location.href = 'https://legoev3.codeplex.com/wiki/search?tab=Documentation&SearchText=' + searchText;
+    }
+
+</script>
+
+<script type="text/javascript">
+    var requirementsActionUri = 'https://legoev3.codeplex.com/documentation/requirements';
+    var requirementsToDelete = [];
+    
+    
+
+    function LoadRequirements(json) {
+        var html = '';
+        if (json === undefined || !json.length) {
+            html = '<div id="NoRequirementsDefined">There are currently no defined requirements.</div>';
+        } else {
+            for (var i = 0; i < json.length; i++) {
+               var requirementType = json[i];
+                html += '<h3>' + requirementType.Caption + '</h3><ul>';
+                for (var j = 0; j < requirementType.Requirements.length; j++) {
+                    var requirement = requirementType.Requirements[j];
+                    html += '<li>' + requirement.DisplayTitle + '</li>';
+                }
+                html += '</ul>';
+            }
+        }
+        
+        $('#RequirementsBody').html(html);
+    }
+
+    $(document).ready(function() {
+        LoadRequirements([{"Caption":"For Use","Type":"Use","Requirements":[{"Id":18083,"Title":"Desktop - Windows 7 or higher, .NET 4.5 or higher","DisplayTitle":"Desktop - Windows 7 or higher, .NET 4.5 or higher"},{"Id":18084,"Title":"Phone - Windows Phone 8 or higher","DisplayTitle":"Phone - Windows Phone 8 or higher"},{"Id":18085,"Title":"WinRT - Windows 8.1 or higher","DisplayTitle":"WinRT - Windows 8.1 or higher"},{"Id":18101,"Title":"EV3 Brick with Firmware v1.03H or higher (you can update via the LEGO MINDSTORMS EV3 desktop software if required)","DisplayTitle":"EV3 Brick with Firmware v1.03H or higher &#40;you can update via the LEGO MINDSTORMS EV3 desktop software if required&#41;"}]},{"Caption":"For Development","Type":"Development","Requirements":[{"Id":18086,"Title":"Visual Studio Express 2013 (or higher)","DisplayTitle":"Visual Studio Express 2013 &#40;or higher&#41;"},{"Id":18388,"Title":"Visual Studio Express 2012 for Windows Phone (Phone projects only)","DisplayTitle":"Visual Studio Express 2012 for Windows Phone &#40;Phone projects only&#41;"}]}]);
+    });
+</script>
+
+<div id="RequirementsContainer">
+    <h2>
+        System Requirements
+        
+    </h2>
+    <div class="clear"></div>
+    <div id="RequirementsBody"><h3>For Use</h3><ul><li>Desktop - Windows 7 or higher, .NET 4.5 or higher</li><li>Phone - Windows Phone 8 or higher</li><li>WinRT - Windows 8.1 or higher</li><li>EV3 Brick with Firmware v1.03H or higher (you can update via the LEGO MINDSTORMS EV3 desktop software if required)</li></ul><h3>For Development</h3><ul><li>Visual Studio Express 2013 (or higher)</li><li>Visual Studio Express 2012 for Windows Phone (Phone projects only)</li></ul></div>
+</div>
+
+
+    </div>
+
+        
+                
+                <div class="clear"></div>
+                
+                <div id="footer">
+                    <div class="row">
+                        <hr>
+                        <ul>
+                            <li>© 2006-2014 Microsoft</li>
+                            <li><a href="https://www.codeplex.com/site/help">Get Help</a></li>
+                            <li><a href="https://legoev3.codeplex.com/site/legal/privacy">Privacy Statement</a></li>
+                            <li><a href="https://www.codeplex.com/site/legal/terms">Terms of Use</a></li>
+                            <li><a href="https://www.codeplex.com/site/legal/conduct">Code of Conduct</a></li>
+                            <li><a href="http://developermedia.com/" target="_blank">Advertise With Us</a></li>
+                            <li>Version 8.8.2014.20928</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all  ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-UpdateProgressPanel" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-UpdateProgressPanel">&nbsp;</span><a href="https://legoev3.codeplex.com/documentation#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="UpdateProgressPanel" class="loading_animation ui-dialog-content ui-widget-content" style="">
+                <div class="row">
+                    <h2 class="anim_h2">
+                        <span id="UpdateProgressText">Updating...</span>
+                        <span id="animatedLoadingIconContainer">
+                            <img id="animatedLoadingIcon" src="./LEGO MINDSTORMS EV3 API - Documentation_files/loading_animation.gif" class="anim_img">
+                        </span>
+                    </h2>
+                </div>
+            </div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div></div></body></html>
