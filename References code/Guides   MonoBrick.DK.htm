@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://www.monobrick.dk/guides/ -->
+<html class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Guides | MonoBrick.DK</title>
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="http://www.monobrick.dk/xmlrpc.php">
+
+		<link rel="alternate" type="application/rss+xml" title="MonoBrick.DK » Feed" href="http://www.monobrick.dk/feed/">
+<link rel="alternate" type="application/rss+xml" title="MonoBrick.DK » Comments Feed" href="http://www.monobrick.dk/comments/feed/">
+
+            <div class="fit-vids-style">­<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script src="./Guides   MonoBrick.DK_files/cb=gapi.loaded_1" async=""></script><script src="./Guides   MonoBrick.DK_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Guides   MonoBrick.DK_files/ga.js"></script><script type="text/javascript" async="" src="./Guides   MonoBrick.DK_files/ga.js"></script><script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.5 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-42606992-1']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="MonoBrick.DK » Guides Comments Feed" href="http://www.monobrick.dk/guides/feed/">
+<link rel="stylesheet" id="miniAudioPlayer-css" href="./Guides   MonoBrick.DK_files/miniplayer.css" type="text/css" media="screen">
+<link rel="stylesheet" id="wp-quicklatex-format-css" href="./Guides   MonoBrick.DK_files/quicklatex-format.css" type="text/css" media="all">
+<link rel="stylesheet" id="bbp-default-css" href="./Guides   MonoBrick.DK_files/bbpress.css" type="text/css" media="screen">
+<link rel="stylesheet" id="thickbox-css" href="./Guides   MonoBrick.DK_files/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpdm-front-css" href="./Guides   MonoBrick.DK_files/front.css" type="text/css" media="all">
+<link rel="stylesheet" id="meteor-slides-css" href="./Guides   MonoBrick.DK_files/meteor-slides.css" type="text/css" media="all">
+<link rel="stylesheet" id="social-widget-css" href="./Guides   MonoBrick.DK_files/social_widget.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-style-css" href="./Guides   MonoBrick.DK_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-media-queries-css" href="./Guides   MonoBrick.DK_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-child-style-css" href="./Guides   MonoBrick.DK_files/style(2).css" type="text/css" media="all">
+<link rel="stylesheet" id="fancybox-css" href="./Guides   MonoBrick.DK_files/jquery.fancybox-1.3.6.pack.css" type="text/css" media="screen">
+<link rel="stylesheet" id="page-list-style-css" href="./Guides   MonoBrick.DK_files/page-list.css" type="text/css" media="all">
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.mb.miniPlayer.js"></script><script type="text/vbscript">
+Function IEBinary_getByteAt(strBinary, iOffset)
+	IEBinary_getByteAt = AscB(MidB(strBinary,iOffset+1,1))
+End Function
+Function IEBinary_getLength(strBinary)
+	IEBinary_getLength = LenB(strBinary)
+End Function
+</script>
+
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/responsive-modernizr.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.metadata.v2.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.touchwipe.1.1.1.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var meteorslidessettings = {"meteorslideshowspeed":"2000","meteorslideshowduration":"3000","meteorslideshowheight":"400","meteorslideshowwidth":"500","meteorslideshowtransition":"blindX"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/slideshow.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/wp-quicklatex-frontend.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.monobrick.dk/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.monobrick.dk/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Using MonoBrick Communication Library On Windows" href="http://www.monobrick.dk/guides/communication-library-guides/setting-up-monobrick-under-windows/">
+<link rel="next" title="Using MonoBrick Communication Library On Linux" href="http://www.monobrick.dk/guides/communication-library-guides/communicating-with-mindstorms-under-linux/">
+<meta name="generator" content="WordPress 3.7.4">
+<link rel="shortlink" href="http://www.monobrick.dk/?p=1349">
+    <script language="JavaScript">
+    <!--
+      jQuery(function(){
+          
+          jQuery('.wpdm-popup').click(function(){
+              tb_show(jQuery(this).html(),this.href+'&modal=1&width=600&height=400');
+              return false;
+          });
+          
+          jQuery('.haspass').click(function(){
+              var url = jQuery(this).attr('href');
+              var id = jQuery(this).attr('rel');
+              var password = jQuery('#pass_'+id).val();
+              jQuery.post('http://www.monobrick.dk/',{download:id,password:password},function(res){
+                  
+                  if(res=='error') {
+                    
+                      jQuery('#wpdm_file_'+id+' .perror').html('Wrong Password');
+                      setTimeout("jQuery('#wpdm_file_"+id+" .perror').html('');",3000);
+                      return false;
+                  } else {
+                      location.href = 'http://www.monobrick.dk/?wpdmact=process&did='+res;
+                  }
+                  //if(res.url!='undefined') location.href=res.url;
+                                           
+              });
+               
+              return false;
+          });
+      })
+    //-->
+    </script>
+    	<link href="./Guides   MonoBrick.DK_files/SyntaxHighlighter.css" type="text/css" rel="stylesheet">
+	<!-- This site is powered by Tweet, Like, Plusone and Share Plugin - http://techxt.com/tweet-like-google-1-and-share-plugin-wordpress/ -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Guides">
+	<meta property="og:url" content="http://www.monobrick.dk/guides/">
+	<meta property="og:site_name" content="MonoBrick.DK">
+	<meta property="og:description" content="Guides">
+	<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+	<style type="text/css">div.socialicons{float:left;display:block;margin-right: 10px;line-height: 1;}div.socialiconsv{line-height: 1;}div.socialicons p{margin-bottom: 0px !important;margin-top: 0px !important;padding-bottom: 0px !important;padding-top: 0px !important;}div.social4iv{background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #aaa;border-radius: 3px 3px 3px 3px;box-shadow: 3px 3px 3px #DDDDDD;padding: 3px;position: fixed;text-align: center;top: 55px;width: 68px;display:none;}div.socialiconsv{padding-bottom: 5px;}</style>
+<link rel="stylesheet" id="wsl_css-css" href="./Guides   MonoBrick.DK_files/style(3).css" type="text/css" media="all">
+<!-- We need this for debugging -->
+<!-- Responsive 1.9.3.9 -->
+<!-- Responsive Child Theme 1.0.0 -->
+
+<!-- All in One SEO Pack 2.2.3.1 by Michael Torbert of Semper Fi Web Design[480,501] -->
+<link rel="canonical" href="./Guides   MonoBrick.DK_files/Guides   MonoBrick.DK.htm">
+<meta property="og:title" content="Guides | MonoBrick.DK">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.monobrick.dk/guides/">
+<meta property="og:image" content="http://www.monobrick.dk/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
+<meta property="og:site_name" content="MonoBrick.DK">
+<meta property="article:published_time" content="2013-01-19T19:21:15Z">
+<meta property="article:modified_time" content="2013-08-23T23:54:29Z">
+<meta name="twitter:card" content="summary">
+<meta itemprop="image" content="http://www.monobrick.dk/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-42606992-1']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; background-image: url('http://www.mindstorms.dk/wp-content/uploads/2012/12/background.jpg'); background-repeat: repeat; background-position: top left; background-attachment: fixed; }
+</style>
+<!-- Custom CSS Styles -->
+<style type="text/css" media="screen">
+/* =Download
+-------------------------------------------------------------- */
+.btn_outer{
+    width:150px;
+    color: #6e6e6e;
+    font: bold 12px Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    padding: 4px 12px 4px 3px;
+    position: relative;
+    text-shadow: 0 1px 0 #fff;
+    -webkit-transition: border-color .218s;
+    -moz-transition: border .218s;
+    -o-transition: border-color .218s;
+    transition: border-color .218s;
+    background: #f3f3f3;
+    background: -webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+    background: -moz-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+    border: solid 1px #dcdcdc;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    top:-10px;
+}
+
+div.downloadbox 
+{
+    text-align: center;
+    width: 180px;/*hack for IE*/   
+    margin: 0 auto;
+}
+div.downloadbox table 
+{
+   text-align: center;
+   width: 180px;/*hack for IE*/   
+   margin: 0 auto;
+   
+}
+/* =Disable post tags
+-------------------------------------------------------------- */
+
+.post-meta {
+   display:none;
+}
+
+.widget-wrapper{
+    border-width: 1px;	
+    border-style: solid ;
+    border-color: #F26100;
+     
+}
+
+
+/*#wrapper {
+    border-width: 1px;	
+    border-style: solid ;
+    border-color: #F26100;
+}*/
+
+
+/* =Primary Menu
+-------------------------------------------------------------- */
+.menu {    
+    background-color:#FF8E44;
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#FF8E44), to(#F26100));
+    background-image:-webkit-linear-gradient(top, #FF8E44, #F26100);    
+    background-image:-moz-linear-gradient(top, #FF8E44, #F26100);
+    background-image:-ms-linear-gradient(top, #FF8E44, #F26100);
+    background-image:-o-linear-gradient(top, #FF8E44, #F26100);
+    background-image:linear-gradient(top, #FF8E44, #F26100);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF8E44, endColorstr=#F26100);
+    
+}
+
+.menu a:hover {
+   background: none repeat scroll 00 #FF8E44 !important; 
+   background-color: #FF8E44; 
+   background-image: none; 
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF8E44,   endColorstr=#FF8E44);
+}
+
+.menu .current_page_item a {
+  background:#999999;
+  color:#ffffff;
+}
+
+.menu li li {
+   background:#999999;
+   border-bottom:1px solid #ccc;
+   color:#ffffff;
+   width:auto;
+}
+.menu li li a {
+    border:none;
+    color:#ffffff;
+    font-size:12px;
+    font-weight:400;
+    height:auto;
+    line-height:20px;
+    min-height:28px;
+    padding:8px 10px 0 10px;
+}
+.menu li li a:hover {    
+   background:#ffffff;    
+   border:none;    
+   color:#333;
+}
+
+ul.menu > li:hover {
+   background-color: #FF8E44;
+   color: #ffffff;
+}
+
+.menu a {
+    border-color: #FF8E44;
+   text-shadow: 0 0px 0px;
+}
+
+/* =Gallery
+-------------------------------------------------------------- */
+.gallery {
+    margin:0 auto 0px;
+    text-align:center;
+    width:110%;
+}
+
+.gallery .gallery-item {
+float : center;
+width:150px;
+height:200px;
+margin-left:20px;
+margin-right:20px;
+display:inline-block;
+}
+
+.gallery img {
+    border:0px solid #ddd;
+}
+
+.gallery .gallery-caption {
+    font-size:12px;
+    margin:0 0 12px;
+}
+
+.gallery dl {
+    margin:0;
+}
+
+.gallery br+br {
+    display:none;
+}
+
+.attachment-gallery img {
+    background:#fff;
+    border:1px solid #f0f0f0;
+    display:block;
+    height:auto;
+    margin:15px auto;
+    max-width:96%;
+    padding:5px;
+    width:auto;
+}
+
+.gallery-meta .full-size, .gallery-meta .aperture, .gallery-meta .focal-length, .gallery-meta .iso, .gallery-meta .shutter, .gallery-meta .camera {
+    display:block;
+}
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget-title, 
+.widget-title-home h3 {
+	display: block;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 23px;
+	margin: 0;
+	padding: 0 0 20px 0;
+	text-align: center;
+        color:#999999;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font-weight: 700;
+	line-height: 1.0em;
+        word-wrap: break-word;
+}
+
+h1 {
+    font-size: 2.625em; /* = 42px */
+    margin-bottom: .5em;
+    margin-top: .5em;
+color:#999999;
+}
+
+h2 {
+    font-size: 2.250em; /* = 36px */
+    margin-bottom: .75em;
+    margin-top: .75em;
+color:#999999;
+}
+
+h3 {
+    font-size: 1.875em; /* = 30px */
+    margin-bottom: .857em;
+    margin-top: .857em;
+color:#999999;
+}
+
+h4 {
+    font-size: 1.500em; /* = 24px */
+    margin-bottom: 1em;
+    margin-top: 1em;
+color:#999999;
+}
+
+h5 {
+    font-size: 1.125em; /* = 18px */
+    margin-bottom: 1.125em;
+    margin-top: 1.125em;
+color:#999999;
+}
+
+h6 {
+    font-size: 1.000em; /* = 16px */
+    margin-bottom: 1.285em;
+    margin-top: 1.285em;
+color:#999999;
+}
+
+
+/* =Links
+-------------------------------------------------------------- */
+a {
+    color:#F26100;
+    font-weight:400;
+    text-decoration:none;
+}
+
+a:hover,
+a:focus,
+a:active {
+     color: #FF8E44;
+     text-decoration:none;
+}
+
+::selection {
+	background: #999;
+    color: #fff;
+	text-shadow: none;
+}
+
+/* =Widget social icons
+-------------------------------------------------------------- */
+.smw_left {
+	text-align: center;
+}
+
+/* =Tables for building instructions
+-------------------------------------------------------------- */
+div.bibox, 
+div.bibox th, 
+div.bibox td,
+div.bibox table {
+	border: 0px solid #ddd;
+}
+
+.player-container{visibility:hidden;border:none;height:30px;width:200px;padding:0 20px 20px 0;}
+
+
+/* =Featured Content
+-------------------------------------------------------------- */
+#featured {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	padding-bottom: 40px;
+	width: 99.893617021277%;
+}
+
+#featured p {
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 27px;
+	padding: 0 40px 0 40px;
+	text-align: justify;
+}
+
+#featured-image {
+	margin: 40px 0 0 0;
+}
+
+#featured-image .fluid-width-video-wrapper {
+	margin-left: -20px;
+}
+
+.featured-image img {
+	margin-top: 44px;
+}
+</style>
+
+	<!-- Easy FancyBox 1.5.6 using FancyBox 1.3.6 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var fb_timeout = null;
+	var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'showCloseButton' : true, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : true };
+	var easy_fancybox_handler = function(){
+	/* IMG */
+	var fb_IMG_select = 'a[href*=".jpg"]:not(.nofancybox), area[href*=".jpg"]:not(.nofancybox), a[href*=".gif"]:not(.nofancybox), area[href*=".gif"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), area[href*=".png"]:not(.nofancybox)';
+	jQuery(fb_IMG_select).addClass('fancybox');
+	var fb_IMG_sections = jQuery('div.gallery');
+	fb_IMG_sections.each(function() { jQuery(this).find(fb_IMG_select).attr('rel', 'gallery-' + fb_IMG_sections.index(this)); });
+	jQuery('a.fancybox, area.fancybox, li.fancybox a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false, 'titleShow' : false, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+	/* Auto-click */ 
+	jQuery('#fancybox-auto').trigger('click');
+	}
+	/* ]]> */
+	</script>
+	<style type="text/css">
+.fancybox-hidden{display:none}.rtl #fancybox-left{left:auto;right:0px}.rtl #fancybox-right{left:0px;right:auto}.rtl #fancybox-right-ico{background-position:-40px -30px}.rtl #fancybox-left-ico{background-position:-40px -60px}.rtl .fancybox-title-over{text-align:right}.rtl #fancybox-left-ico,.rtl #fancybox-right-ico{right:-9999px}.rtl #fancybox-right:hover span{right:auto;left:20px}.rtl #fancybox-left:hover span{right:20px}#fancybox-img{max-width:none;max-height:none}
+	</style>
+	<!--[if lt IE 8]>            
+		<style type="text/css">
+.fancybox-ie6 #fancybox-close{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_close.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-left-ico{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_nav_left.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-right-ico{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_nav_right.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-over{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_title_over.png",sizingMethod="scale");zoom:1}
+.fancybox-ie6 #fancybox-title-float-left{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_title_left.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-float-main{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_title_main.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-float-right{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_title_right.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-bg-w,.fancybox-ie6 #fancybox-bg-e,.fancybox-ie6 #fancybox-left,.fancybox-ie6 #fancybox-right,#fancybox-hide-sel-frame{height:expression(this.parentNode.clientHeight+"px")}
+#fancybox-loading.fancybox-ie6{position:absolute;margin-top:0;top:expression((-20+(document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2)+(ignoreMe=document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+"px")}
+#fancybox-loading.fancybox-ie6 div{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_loading.png", sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-n{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_n.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-ne{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_ne.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-e{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_e.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-se{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_se.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-s{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_s.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-sw{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_sw.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-w{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_w.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-nw{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_nw.png",sizingMethod="scale")}
+		</style>
+	<![endif]-->
+	<!--[if IE 8]>            
+		<style type="text/css">
+.fancybox-ie #fancybox-bg-n{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_n.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-ne{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_ne.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-e{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_e.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-se{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_se.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-s{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_s.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-sw{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_sw.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-w{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_w.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-nw{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.monobrick.dk/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_nw.png",sizingMethod="scale")'}
+		</style>
+	<![endif]-->
+<style type="text/css">
+.paypal-donations { text-align: center !important }
+</style>
+	<script src="./Guides   MonoBrick.DK_files/secureAnonymousFramework"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><style type="text/css">* html #li_ui_li_gen_1411542772733_0 a#li_ui_li_gen_1411542772733_0-link{height:1% !important;}#li_ui_li_gen_1411542772733_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1411542772733_0 span{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important;}#li_ui_li_gen_1411542772733_0 a#li_ui_li_gen_1411542772733_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1411542772733_0 a#li_ui_li_gen_1411542772733_0-link:link, #li_ui_li_gen_1411542772733_0 a#li_ui_li_gen_1411542772733_0-link:visited, #li_ui_li_gen_1411542772733_0 a#li_ui_li_gen_1411542772733_0-link:hover, #li_ui_li_gen_1411542772733_0 a#li_ui_li_gen_1411542772733_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1411542772733_0 a#li_ui_li_gen_1411542772733_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-logo{background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-position:0px -276px !important;background-repeat:no-repeat !important;background-size:initial !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;}#li_ui_li_gen_1411542772733_0.hovered #li_ui_li_gen_1411542772733_0-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-logo, #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-logo{}#li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1411542772733_0.hovered #li_ui_li_gen_1411542772733_0-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-title, #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title{}.IN-shadowed #li_ui_li_gen_1411542772733_0.hovered #li_ui_li_gen_1411542772733_0-title{}.IN-shadowed #li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-title, .IN-shadowed #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-title{}#li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title-text, #li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;-webkit-font-smoothing:antialiased !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1411542772733_0.hovered #li_ui_li_gen_1411542772733_0-title-text, #li_ui_li_gen_1411542772733_0.hovered #li_ui_li_gen_1411542772733_0-title-text *{color:#000 !important;}#li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-title-text, #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-title-text, #li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-title-text *, #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-title-text *{color:#666 !important;}#li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title #li_ui_li_gen_1411542772733_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title-text, .success #li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1411542772733_0 #li_ui_li_gen_1411542772733_0-title{}.success #li_ui_li_gen_1411542772733_0.hovered #li_ui_li_gen_1411542772733_0-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1411542772733_0.hovered #li_ui_li_gen_1411542772733_0-title-text, .success #li_ui_li_gen_1411542772733_0.hovered #li_ui_li_gen_1411542772733_0-title-text *{color:#000 !important;}.success #li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-title, .success #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-title-text, .success #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-title-text, .success #li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-title-text *, .success #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1411542772733_0.clicked #li_ui_li_gen_1411542772733_0-title, .IN-shadowed .success #li_ui_li_gen_1411542772733_0.down #li_ui_li_gen_1411542772733_0-title{}#li_ui_li_gen_1411542772742_1-container.IN-right {display:inline-block !important;float:left !important;overflow:visible !important;position:relative !important;height:18px !important;padding-left:2px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1411542772742_1.IN-right {display:block !important;float:left !important;height:18px !important;margin-right:4px !important;padding-right:4px !important;background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:right -100px !important;}#li_ui_li_gen_1411542772742_1-inner.IN-right {display:block !important;float:left !important;padding-left:8px !important;text-align:center !important;background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:0px -60px !important;}#li_ui_li_gen_1411542772742_1-content.IN-right {display:inline !important;font-size:11px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:18px !important;padding:0 5px 0 5px !important;}#li_ui_li_gen_1411542772742_1-container.IN-empty {display:none !important;}#li_ui_li_gen_1411542772742_1-container.IN-hidden #li_ui_li_gen_1411542772742_1 {display:none !important;}</style></head>
+
+<body class="page page-id-1349 page-parent page-template-default custom-background" data-twttr-rendered="true" style="">
+
+<div id="container" class="hfeed">
+
+	<div id="header">
+
+		
+		
+		
+		
+			<div id="logo">
+				<a href="http://www.monobrick.dk/"><img src="./Guides   MonoBrick.DK_files/cropped-Logo.png" width="646" height="100" alt="MonoBrick.DK"></a>
+			</div><!-- end of #logo -->
+
+		
+		
+				<div class="main-nav"><div id="responsive_current_menu_item">Guides</div><ul id="menu-menu" class="menu"><li id="menu-item-502" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-502"><a href="http://www.monobrick.dk/">Home</a></li>
+<li id="menu-item-500" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-500"><a href="http://www.monobrick.dk/news/">News</a></li>
+<li id="menu-item-559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-559"><a href="http://www.monobrick.dk/software/">Software</a>
+<ul class="sub-menu">
+	<li id="menu-item-3630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3630"><a href="http://www.monobrick.dk/software/ev3firmware/">MonoBrick EV3 Firmware</a></li>
+	<li id="menu-item-1322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1322"><a href="http://www.monobrick.dk/software/monobrick/">MonoBrick Communication Library</a></li>
+	<li id="menu-item-562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-562"><a href="http://www.monobrick.dk/software/remote/">MonoBrick Remote</a></li>
+	<li id="menu-item-2418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2418"><a href="http://www.monobrick.dk/software/monobrick-remote-for-android/">MonoBrick Remote For Android</a></li>
+	<li id="menu-item-1329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1329"><a href="http://www.monobrick.dk/software/bricktunnel/">MonoBrick Tunnel</a></li>
+	<li id="menu-item-2129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2129"><a href="http://www.monobrick.dk/software/android-tunnel/">MonoBrick Tunnel for Android</a></li>
+	<li id="menu-item-1983" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1983"><a href="http://www.monobrick.dk/software/c-library/">C++ Library</a></li>
+</ul>
+</li>
+<li id="menu-item-497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-497"><a href="http://www.monobrick.dk/robots/">Robots</a>
+<ul class="sub-menu">
+	<li id="menu-item-866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-866"><a href="http://www.monobrick.dk/robots/aerial-ropeway/">Aerial Ropeway</a></li>
+	<li id="menu-item-498" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-498"><a href="http://www.monobrick.dk/robots/image-scanner/">Image Scanner</a></li>
+	<li id="menu-item-948" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-948"><a href="http://www.monobrick.dk/robots/plotter/">Plotter</a></li>
+	<li id="menu-item-533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-533"><a href="http://www.monobrick.dk/robots/rfid-rover/">RFID Rover</a></li>
+	<li id="menu-item-499" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-499"><a href="http://www.monobrick.dk/robots/spy-bot/">Spy Bot</a></li>
+	<li id="menu-item-1140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1140"><a href="http://www.monobrick.dk/robots/brick-sorter/">Brick Sorter</a></li>
+	<li id="menu-item-1141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1141"><a href="http://www.monobrick.dk/robots/candy-machine/">Candy Machine</a></li>
+	<li id="menu-item-1142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1142"><a href="http://www.monobrick.dk/robots/cooler/">Cooler</a></li>
+	<li id="menu-item-1143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1143"><a href="http://www.monobrick.dk/robots/pinball-machine/">Pinball Machine</a></li>
+	<li id="menu-item-1144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1144"><a href="http://www.monobrick.dk/robots/scanner/">RCX Scanner</a></li>
+</ul>
+</li>
+<li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-540"><a href="http://www.monobrick.dk/sensors/">Sensors</a>
+<ul class="sub-menu">
+	<li id="menu-item-1067" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1067"><a href="http://www.monobrick.dk/sensors/magnetic-bit-reader/">Magnetic Bit Reader</a></li>
+	<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-538"><a href="http://www.monobrick.dk/sensors/rfid-reader/">RFID Reader</a></li>
+</ul>
+</li>
+<li id="menu-item-1351" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1349 current_page_item menu-item-has-children menu-item-1351"><a href="./Guides   MonoBrick.DK_files/Guides   MonoBrick.DK.htm">Guides</a>
+<ul class="sub-menu">
+	<li id="menu-item-4710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4710"><a href="http://www.monobrick.dk/guides/firmware-guides/">MonoBrick Firmware</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3627"><a href="http://www.monobrick.dk/guides/firmware-guides/monobrickfirmwaresdcardwindows/">Creating A Bootable SD Card On Windows</a></li>
+		<li id="menu-item-4664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4664"><a href="http://www.monobrick.dk/guides/firmware-guides/monobrickfirmwaresdcardposix/">Creating A Bootable SD Card On Mac OS And Linux</a></li>
+		<li id="menu-item-4692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4692"><a href="http://www.monobrick.dk/guides/firmware-guides/installing-the-xamarin-studio-add-in-for-use-with-monobrick-firmware/">Xamarin Studio Add-in</a></li>
+		<li id="menu-item-4660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4660"><a href="http://www.monobrick.dk/guides/firmware-guides/setting-up-a-usb-connection-for-use-with-monobrick-firmware/">Setting Up a USB Connection</a></li>
+		<li id="menu-item-4662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4662"><a href="http://www.monobrick.dk/guides/firmware-guides/setting-up-a-wifi-connection-for-use-with-monobrick-firmware/">Setting Up a WiFi Connection</a></li>
+	</ul>
+</li>
+	<li id="menu-item-4657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4657"><a href="http://www.monobrick.dk/guides/communication-library-guides/">MonoBrick Communication Library</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1500" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1500"><a href="http://www.monobrick.dk/guides/communication-library-guides/monobrick-guide/">MonoBrick Communication Library Programming Guide</a></li>
+		<li id="menu-item-1352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1352"><a href="http://www.monobrick.dk/guides/communication-library-guides/setting-up-monobrick-under-windows/">Using MonoBrick Communication Library On Windows</a></li>
+		<li id="menu-item-1905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1905"><a href="http://www.monobrick.dk/guides/communication-library-guides/setting-up-monobrick-on-mac-os/">Using MonoBrick Communication Library On Mac OS</a></li>
+		<li id="menu-item-1379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1379"><a href="http://www.monobrick.dk/guides/communication-library-guides/communicating-with-mindstorms-under-linux/">Using MonoBrick Communication Library On Linux</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2503"><a href="http://www.monobrick.dk/guides/how-to-establish-a-wifi-connection-with-the-ev3-brick/">How To Establish A WiFi Connection With The EV3</a></li>
+</ul>
+</li>
+<li id="menu-item-3230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3230"><a href="http://www.monobrick.dk/forums/">Forums</a>
+<ul class="sub-menu">
+	<li id="menu-item-3231" class="menu-item menu-item-type-post_type menu-item-object-forum menu-item-3231"><a href="http://www.monobrick.dk/forums/user/monobrick-communication-library/">MonoBrick Communication Library</a></li>
+	<li id="menu-item-3232" class="menu-item menu-item-type-post_type menu-item-object-forum menu-item-3232"><a href="http://www.monobrick.dk/forums/user/monobrick-ev3-firmware-2/">MonoBrick EV3 Firmware</a></li>
+</ul>
+</li>
+<li id="menu-item-507" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-507"><a href="http://www.monobrick.dk/about/">About/Contact</a></li>
+<li id="menu-item-4075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4075"><a href="http://www.monobrick.dk/forums/">Forums</a></li>
+</ul><a id="responsive_menu_button"></a></div>
+		
+		
+	</div><!-- end of #header -->
+
+	<div id="wrapper" class="clearfix">
+
+<div id="content" class="grid col-620">
+
+	
+		
+			
+						<div id="post-1349" class="post-1349 page type-page status-publish hentry">
+				
+				
+	<h1 class="entry-title post-title">Guides</h1>
+
+	<div class="post-meta">
+		<span class="meta-prep meta-prep-author posted">Posted on </span><a href="./Guides   MonoBrick.DK_files/Guides   MonoBrick.DK.htm" title="19:21" rel="bookmark"><span class="timestamp updated">January 19, 2013</span></a><span class="byline"> by </span><span class="author vcard"><a class="url fn n" href="http://www.monobrick.dk/author/admin/" title="View all posts by Anders Søborg">Anders Søborg</a></span>
+					<span class="comments-link">
+		<span class="mdash">—</span>
+				<a href="http://www.monobrick.dk/guides/#respond" title="Comment on Guides">No Comments ↓</a>		</span>
+			</div><!-- end of .post-meta -->
+
+				<div class="post-entry">
+					<p>
+<!-- Page-list plugin v.4.2 wordpress.org/extend/plugins/page-list/ -->
+</p><div class="page-list page-list-ext ">
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/how-to-establish-a-wifi-connection-with-the-ev3-brick/" title="How To Establish A WiFi Connection With The EV3"><img src="./Guides   MonoBrick.DK_files/WIFILogo-150x150.png" width="80" alt="How To Establish A WiFi Connection With The EV3"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/how-to-establish-a-wifi-connection-with-the-ev3-brick/" title="How To Establish A WiFi Connection With The EV3">How To Establish A WiFi Connection With The EV3</a></h3><div class="page-list-ext-item-content">This guide descries how to establish a WiFi connection with the EV3 LEGO Mindstorms brick using the standard firmware. Before you can...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/communication-library-guides/" title="MonoBrick Communication Library"><img src="./Guides   MonoBrick.DK_files/monobrickLogoFrontPage-150x150.png" width="80" alt="MonoBrick Communication Library"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/communication-library-guides/" title="MonoBrick Communication Library">MonoBrick Communication Library</a></h3><div class="page-list-ext-item-content"></div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/communication-library-guides/monobrick-guide/" title="MonoBrick Communication Library Programming Guide"><img src="./Guides   MonoBrick.DK_files/monobrickLogo100.png" width="80" alt="MonoBrick Communication Library Programming Guide"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/communication-library-guides/monobrick-guide/" title="MonoBrick Communication Library Programming Guide">MonoBrick Communication Library Programming Guide</a></h3><div class="page-list-ext-item-content">This guide descries how to use the MonoBrick communication library with the EV3. Users of the NXT can also use this guide as inspiration...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/communication-library-guides/communicating-with-mindstorms-under-linux/" title="Using MonoBrick Communication Library On Linux"><img src="./Guides   MonoBrick.DK_files/LinuxFeature-e1358630628708.png" width="80" alt="Using MonoBrick Communication Library On Linux"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/communication-library-guides/communicating-with-mindstorms-under-linux/" title="Using MonoBrick Communication Library On Linux">Using MonoBrick Communication Library On Linux</a></h3><div class="page-list-ext-item-content">This guide describe how to get the LEGO Mindstorms NXT brick to work with the MonoBrick communication library &nbsp;and its related software ...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/communication-library-guides/setting-up-monobrick-on-mac-os/" title="Using MonoBrick Communication Library On Mac OS"><img src="./Guides   MonoBrick.DK_files/appleLogoFeature-e1358630665515.png" width="80" alt="Using MonoBrick Communication Library On Mac OS"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/communication-library-guides/setting-up-monobrick-on-mac-os/" title="Using MonoBrick Communication Library On Mac OS">Using MonoBrick Communication Library On Mac OS</a></h3><div class="page-list-ext-item-content">This guide describe how to get the LEGO Mindstorms NXT brick to work with&nbsp;the MonoBrick communication library &nbsp;under Mac OS. 
+
+Installing M...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/communication-library-guides/setting-up-monobrick-under-windows/" title="Using MonoBrick Communication Library On Windows"><img src="./Guides   MonoBrick.DK_files/windowsFeature-e1358630646381.png" width="80" alt="Using MonoBrick Communication Library On Windows"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/communication-library-guides/setting-up-monobrick-under-windows/" title="Using MonoBrick Communication Library On Windows">Using MonoBrick Communication Library On Windows</a></h3><div class="page-list-ext-item-content">This guide will help you setup USB and Bluetooth communication between the LEGO Mindstorms NXT brick and the Windows operation system...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/firmware-guides/" title="MonoBrick Firmware"><img src="./Guides   MonoBrick.DK_files/EV3Slide-150x150.png" width="80" alt="MonoBrick Firmware"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/firmware-guides/" title="MonoBrick Firmware">MonoBrick Firmware</a></h3><div class="page-list-ext-item-content"></div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/firmware-guides/monobrickfirmwaresdcardposix/" title="Creating A Bootable SD Card On Mac OS And Linux"><img src="./Guides   MonoBrick.DK_files/SDCard-150x150.png" width="80" alt="Creating A Bootable SD Card On Mac OS And Linux"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/firmware-guides/monobrickfirmwaresdcardposix/" title="Creating A Bootable SD Card On Mac OS And Linux">Creating A Bootable SD Card On Mac OS And Linux</a></h3><div class="page-list-ext-item-content">This guide will show you how to create a bootable MonoBrick firmware SD card using Mac OS or Linux. This guide is divided into the...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/firmware-guides/monobrickfirmwaresdcardwindows/" title="Creating A Bootable SD Card On Windows"><img src="./Guides   MonoBrick.DK_files/SDCard-150x150.png" width="80" alt="Creating A Bootable SD Card On Windows"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/firmware-guides/monobrickfirmwaresdcardwindows/" title="Creating A Bootable SD Card On Windows">Creating A Bootable SD Card On Windows</a></h3><div class="page-list-ext-item-content">This guide will show you how to use the MonoBrick EV3 firmware using the Windows operating system. This guide is divided into the following...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/firmware-guides/running-and-manually-transfering-a-program/" title="Running and Manually Transfering a Program"><img src="./Guides   MonoBrick.DK_files/WinSCP_Logo-150x150.png" width="80" alt="Running and Manually Transfering a Program"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/firmware-guides/running-and-manually-transfering-a-program/" title="Running and Manually Transfering a Program">Running and Manually Transfering a Program</a></h3><div class="page-list-ext-item-content">The following guide described how to run a program and manually transfer programs to the EV3. You can also transfer and run programs...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/firmware-guides/setting-up-a-usb-connection-for-use-with-monobrick-firmware/" title="Setting Up a USB Connection"><img src="./Guides   MonoBrick.DK_files/usb-150x150.png" width="80" alt="Setting Up a USB Connection"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/firmware-guides/setting-up-a-usb-connection-for-use-with-monobrick-firmware/" title="Setting Up a USB Connection">Setting Up a USB Connection</a></h3><div class="page-list-ext-item-content">The following section describes how to establish a USB connection for use with the EV3 MonoBrick firmware. The MonoBrick firmware supports...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/firmware-guides/setting-up-a-wifi-connection-for-use-with-monobrick-firmware/" title="Setting Up a WiFi Connection"><img src="./Guides   MonoBrick.DK_files/WIFILogo-150x150(1).png" width="80" alt="Setting Up a WiFi Connection"></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/firmware-guides/setting-up-a-wifi-connection-for-use-with-monobrick-firmware/" title="Setting Up a WiFi Connection">Setting Up a WiFi Connection</a></h3><div class="page-list-ext-item-content">To make the MonoBrick firmware connect to a WiFi you need to attach a WiFi dongle to the USB port on the EV3. The MonoBrick firmware...</div></div>
+<div class="page-list-ext-item"><div class="page-list-ext-image"><a href="http://www.monobrick.dk/guides/firmware-guides/installing-the-xamarin-studio-add-in-for-use-with-monobrick-firmware/" title="Xamarin Studio Add-in "><img src="./Guides   MonoBrick.DK_files/ide-xamarin-studio-150x150.png" width="80" alt="Xamarin Studio Add-in "></a></div> <h3 class="page-list-ext-title"><a href="http://www.monobrick.dk/guides/firmware-guides/installing-the-xamarin-studio-add-in-for-use-with-monobrick-firmware/" title="Xamarin Studio Add-in ">Xamarin Studio Add-in </a></h3><div class="page-list-ext-item-content">This guide describes how to install and configure the MonoBrick Firmware add-in for Xamarin Studio. With the add-in you can download...</div></div>
+
+</div>
+<div class="social4i" style="height:29px;">
+<div class="social4in" style="height:29px;float: left;">
+<div class="socialicons s4fblike" style="float:left;margin-right: 10px;">
+<div class="fb-like fb_iframe_widget" data-href="http://www.monobrick.dk/guides/" data-send="false" data-layout="button_count" data-width="100" data-height="21" data-show-faces="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;height=21&amp;href=http%3A%2F%2Fwww.monobrick.dk%2Fguides%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=100"><span style="vertical-align: bottom; width: 76px; height: 20px;"><iframe name="f2471c64b8" width="100px" height="21px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Guides   MonoBrick.DK_files/like.htm" style="border: none; visibility: visible; width: 76px; height: 20px;" class=""></iframe></span></div>
+</div>
+<div class="socialicons s4linkedin" style="float:left;margin-right: 10px;"><span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1411542772733_0"><a id="li_ui_li_gen_1411542772733_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1411542772733_0-logo">in</span><span id="li_ui_li_gen_1411542772733_0-title"><span id="li_ui_li_gen_1411542772733_0-mark"></span><span id="li_ui_li_gen_1411542772733_0-title-text">Share</span></span></a></span></span><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1411542772742_1-container" class="IN-right IN-hidden"><span id="li_ui_li_gen_1411542772742_1" class="IN-right"><span id="li_ui_li_gen_1411542772742_1-inner" class="IN-right"><span id="li_ui_li_gen_1411542772742_1-content" class="IN-right">0</span></span></span></span></span></span><script type="in/share+init" data-url="http://www.monobrick.dk/guides/" data-counter="right"></script></div>
+<div class="socialicons s4twitter" style="float:left;margin-right: 10px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Guides   MonoBrick.DK_files/tweet_button.1410989646.htm" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 107px; height: 20px;"></iframe></div>
+<div class="socialicons s4plusone" style="float:left;margin-right: 10px;">
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1411542772357" name="I0_1411542772357" src="./Guides   MonoBrick.DK_files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+									</div>
+				<!-- end of .post-entry -->
+
+				
+
+<div class="post-edit"></div>
+							</div><!-- end of #post-1349 -->
+			
+						
+
+
+
+
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.monobrick.dk/guides/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.monobrick.dk/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+						<!--
+   wsl_render_login_form
+   WordPress Social Login Plugin ( WordPress Social Login 2.1.5 ) 
+   http://wordpress.org/extend/plugins/wordpress-social-login/
+-->
+<style>
+#wp-social-login-connect-with {font-weight: bold;}
+#wp-social-login-connect-options {padding:10px;}
+#wp-social-login-connect-options a {text-decoration: none;}
+#wp-social-login-connect-options img {border:0 none;}
+.wsl_connect_with_provider {}</style>
+	<span id="wp-social-login-connect-with">Login with:</span>
+	<div id="wp-social-login-connect-options">
+				<a rel="nofollow" href="http://www.monobrick.dk/wp-login.php?action=wordpress_social_authenticate&provider=Facebook&redirect_to=http%3A%2F%2Fwww.monobrick.dk%2Fguides%2F" title="Connect with Facebook" class="wsl_connect_with_provider">
+					<img alt="Facebook" title="Facebook" src="./Guides   MonoBrick.DK_files/facebook.png">
+				</a>
+								<a rel="nofollow" href="http://www.monobrick.dk/wp-login.php?action=wordpress_social_authenticate&provider=Google&redirect_to=http%3A%2F%2Fwww.monobrick.dk%2Fguides%2F" title="Connect with Google" class="wsl_connect_with_provider">
+					<img alt="Google" title="Google" src="./Guides   MonoBrick.DK_files/google.png">
+				</a>
+								<a rel="nofollow" href="http://www.monobrick.dk/wp-login.php?action=wordpress_social_authenticate&provider=Twitter&redirect_to=http%3A%2F%2Fwww.monobrick.dk%2Fguides%2F" title="Connect with Twitter" class="wsl_connect_with_provider">
+					<img alt="Twitter" title="Twitter" src="./Guides   MonoBrick.DK_files/twitter.png">
+				</a>
+								<a rel="nofollow" href="http://www.monobrick.dk/wp-login.php?action=wordpress_social_authenticate&provider=LinkedIn&redirect_to=http%3A%2F%2Fwww.monobrick.dk%2Fguides%2F" title="Connect with LinkedIn" class="wsl_connect_with_provider">
+					<img alt="LinkedIn" title="LinkedIn" src="./Guides   MonoBrick.DK_files/linkedin.png">
+				</a>
+								<a rel="nofollow" href="http://www.monobrick.dk/wp-login.php?action=wordpress_social_authenticate&provider=Stackoverflow&redirect_to=http%3A%2F%2Fwww.monobrick.dk%2Fguides%2F" title="Connect with Stackoverflow" class="wsl_connect_with_provider">
+					<img alt="Stackoverflow" title="Stackoverflow" src="./Guides   MonoBrick.DK_files/stackoverflow.png">
+				</a>
+								<a rel="nofollow" href="http://www.monobrick.dk/wp-login.php?action=wordpress_social_authenticate&provider=GitHub&redirect_to=http%3A%2F%2Fwww.monobrick.dk%2Fguides%2F" title="Connect with GitHub" class="wsl_connect_with_provider">
+					<img alt="GitHub" title="GitHub" src="./Guides   MonoBrick.DK_files/github.png">
+				</a>
+					</div> 
+<!-- /wsl_render_login_form -->  
+													<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" value="" size="30"></p>
+<p class="comment-form-email"><label for="email">E-mail</label> <span class="required">*</span><input id="email" name="email" type="text" value="" size="30"></p>
+<p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" value="" size="30"></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="1349" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b3c1e042e4"></p><p style="display: none;"></p>					<input type="hidden" id="ak_js" name="ak_js" value="1411542772084"></form>
+							</div><!-- #respond -->
+			        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#commentform').submit(function () {
+                    _gaq.push(
+                            ['_setAccount', 'UA-42606992-1'],
+                            ['_trackEvent', 'comment', 'submit']
+                    );
+                });
+            });
+        </script>
+		
+
+			
+		
+</div><!-- end of #content -->
+
+
+	<div id="widgets" class="grid col-300 fit">
+		
+		<div id="paypal_donations-2" class="widget-wrapper widget_paypal_donations"><div class="widget-title"><h3>Make a donation</h3></div><!-- Begin PayPal Donations by http://johansteen.se/ -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <div class="paypal-donations">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="anders@mindstorms.dk">
+<input type="hidden" name="item_name" value="Support Mindstorms.dk"><input type="hidden" name="amount" value="5"><input type="hidden" name="currency_code" value="USD"><input type="image" src="./Guides   MonoBrick.DK_files/paypal_medium.png" name="submit" alt="PayPal - The safer, easier way to pay online."><img alt="" src="./Guides   MonoBrick.DK_files/pixel.gif" width="1" height="1">    </div>
+</form>
+<!-- End PayPal Donations -->
+</div><div id="social-widget-2" class="widget-wrapper Social_Widget"><div class="widget-title"><h3>Follow</h3></div><div class="socialmedia-buttons smw_left"><a href="http://www.facebook.com/monobrick.dk" rel="nofollow" target="_blank"><img width="32" height="32" src="./Guides   MonoBrick.DK_files/facebook(1).png" alt=" Facebook" title=" Facebook" class="scale"></a><a href="http://twitter.com/MindstormsDK" rel="nofollow" target="_blank"><img width="32" height="32" src="./Guides   MonoBrick.DK_files/twitter(1).png" alt=" Twitter" title=" Twitter" class="scale"></a><a href="http://www.youtube.com/user/210253" rel="nofollow" target="_blank"><img width="32" height="32" src="./Guides   MonoBrick.DK_files/youtube.png" alt=" YouTube" title=" YouTube" class="scale"></a><a href="mailto:anders@mindstorms.dk" rel="nofollow" target="_blank"><img width="32" height="32" src="./Guides   MonoBrick.DK_files/email.png" alt=" E-mail" title=" E-mail" class="scale"></a></div></div>
+			</div><!-- end of #widgets -->
+</div><!-- end of #wrapper -->
+</div><!-- end of #container -->
+
+<div id="footer" class="clearfix">
+	
+	<div id="footer-wrapper">
+
+		
+		<div class="grid col-940">
+
+			<div class="grid col-540">
+							</div>
+			<!-- end of col-540 -->
+
+			<div class="grid col-380 fit">
+				<ul class="social-icons"></ul><!-- end of .social-icons -->			</div>
+			<!-- end of col-380 fit -->
+
+		</div>
+		<!-- end of col-940 -->
+		
+		<div class="grid col-300 copyright">
+			© 2014<a href="http://www.monobrick.dk/" title="MonoBrick.DK">
+				MonoBrick.DK			</a>
+		</div>
+		<!-- end of .copyright -->
+
+		<div class="grid col-300 scroll-top"><a href="http://www.monobrick.dk/guides/#scroll-top" title="scroll to top">↑</a></div>
+
+		<div class="grid col-300 fit powered">
+			LEGO® does not sponsor, authorise or endorse this site
+		</div>
+		<!-- end .powered -->
+
+	</div>
+	<!-- end #footer-wrapper -->
+
+	</div><!-- end #footer -->
+
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shCore.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushCSharp.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushPhp.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushJScript.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushJava.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushVb.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushSql.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushXml.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushDelphi.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushPython.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushRuby.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushCss.js"></script>
+<script class="javascript" src="./Guides   MonoBrick.DK_files/shBrushCpp.js"></script>
+<script class="javascript">
+dp.SyntaxHighlighter.ClipboardSwf = 'http://www.monobrick.dk/wp-content/plugins/google-syntax-highlighter/Scripts/clipboard.swf';
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/form.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/editor.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/www.monobrick.dk\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/www.monobrick.dk\/wp-includes\/js\/thickbox\/tb-close.png"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/thickbox.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/responsive-scripts.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.fancybox-1.3.6.pack.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.easing.pack.js"></script>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/jquery.mousewheel.pack.js"></script>
+
+	<!-- start miniAudioPlayer initializer -->
+	
+	<style>
+	/*++++++++++++++++++++++++++++++++++++++++++++++++++
+MAP custom skin: mySkin
+http://pupunzi.com/mb.components/mb.miniAudioPlayer/demo/skinMaker.html
+
+background: rgba(235, 21, 21, 1)
+icons: rgba(255, 254, 250, 1)
+border: rgba(235, 101, 110, 1)
+borderLeft: rgba(230, 3, 3, 1)
+borderRight: rgba(184, 14, 14, 1)
+mute: rgba(255, 61, 61, 1)
+download: rgba(212, 32, 38, 0.48)
+downloadHover: rgba(255, 3, 3, 1)
+++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* Older browser (IE8) not supporting rgba() */
+.mbMiniPlayer.mySkin.shadow table{box-shadow:0 0 3px #1c0606;}
+.mbMiniPlayer.mySkin table span{background-color:#eb1515;}
+.mbMiniPlayer.mySkin table span.map_play{border-left:1px solid #e60303;}
+.mbMiniPlayer.mySkin table span.map_volume{border-right:1px solid #b80e0e;}
+.mbMiniPlayer.mySkin table span.map_volume.mute{color: #ff3d3d;}
+.mbMiniPlayer.mySkin .map_download{color: #d42026;}
+.mbMiniPlayer.mySkin .map_download:hover{color: #ff0303;}
+.mbMiniPlayer.mySkin table span{color: #fffefa;}
+.mbMiniPlayer.mySkin table {border: 1px solid #eb656e !important;}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.mbMiniPlayer.mySkin table{background-color:transparent;}
+.mbMiniPlayer.mySkin.shadow table{box-shadow:0 0 3px rgba(28, 6, 6, 0.01);}
+.mbMiniPlayer.mySkin table span{background-color:rgba(235, 21, 21, 1);}
+.mbMiniPlayer.mySkin table span.map_play{border-left:1px solid rgba(230, 3, 3, 1);}
+.mbMiniPlayer.mySkin table span.map_volume{border-right:1px solid rgba(184, 14, 14, 1);}
+.mbMiniPlayer.mySkin table span.map_volume.mute{color: rgba(255, 61, 61, 1);}
+.mbMiniPlayer.mySkin .map_download{color: rgba(212, 32, 38, 0.48);}
+.mbMiniPlayer.mySkin .map_download:hover{color: rgba(255, 3, 3, 1);}
+.mbMiniPlayer.mySkin table span{color: rgba(255, 254, 250, 1);text-shadow: 1px -1px 1px rgba(189, 11, 11, 1)!important;}
+.mbMiniPlayer.mySkin table span{color: rgba(255, 254, 250, 1);}
+.mbMiniPlayer.mySkin table {border: 1px solid rgba(235, 101, 110, 1) !important;}
+.mbMiniPlayer.mySkin table span.map_title{color: #000; text-shadow:none!important}
+/*++++++++++++++++++++++++++++++++++++++++++++++++*/
+	</style>
+
+	<script type="text/javascript">
+
+    function initializeMiniAudioPlayer(){
+         jQuery("a[href*='.mp3'] ,a[href*='.m4a']").not(".map_excuded").mb_miniPlayer({
+				inLine:true,
+                width:"200",
+				skin:"black",
+				animate:true,
+				volume:.2,
+				autoplay:false,
+				showVolumeLevel:true,
+				showTime:true,
+				id3:false,
+				showRew:true,
+				downloadable:false,
+				downloadPage:"http://www.monobrick.dk/wp-content/plugins/wp-miniaudioplayer/map_download.php",
+				swfPath:"http://www.monobrick.dk/wp-content/plugins/wp-miniaudioplayer/js/",
+				onReady: function(player, $controlsBox){
+				   if(player.opt.downloadable && player.opt.downloadablesecurity && !false){
+				        jQuery(".map_download", $controlsBox).remove();
+				   }
+				}
+		});
+    }
+
+	jQuery(function(){
+          initializeMiniAudioPlayer();
+          jQuery(document).ajaxSuccess(function(event, xhr, settings) {
+           	initializeMiniAudioPlayer();
+          });
+	});
+	</script>
+	<!-- end miniAudioPlayer initializer -->
+
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Guides   MonoBrick.DK_files/ZEbdHPQfV3x.htm" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Guides   MonoBrick.DK_files/ZEbdHPQfV3x(1).htm" style="border: none;"></iframe></div></div></div>
+<script type="text/javascript" src="./Guides   MonoBrick.DK_files/widgets.js"></script><script type="text/javascript" src="./Guides   MonoBrick.DK_files/all.js"></script><script type="text/javascript" src="./Guides   MonoBrick.DK_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" src="./Guides   MonoBrick.DK_files/in.js"></script><iframe name="oauth2relay701717692" id="oauth2relay701717692" src="./Guides   MonoBrick.DK_files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+<script type="text/javascript">
+jQuery(document).on('ready post-load', easy_fancybox_handler );
+</script>
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.monobrick.dk @ 2014-09-24 07:13:05 by W3 Total Cache --><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

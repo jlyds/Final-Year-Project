@@ -1,0 +1,17 @@
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\bin\Debug\乐高停车机器人.exe.config
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\乐高停车机器人.exe
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\乐高停车机器人.pdb
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\bin\Debug\乐高停车机器人.exe
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\bin\Debug\乐高停车机器人.pdb
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\bin\Debug\LibUsbDotNet.dll
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\bin\Debug\MonoBrick.dll
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\bin\Debug\MonoBrickFirmware.dll
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\bin\Debug\MonoBrick.xml
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\Indoor Helper Robot.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\乐高停车机器人_Content.g.cs
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\乐高停车机器人_MarkupCompile.cache
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\乐高停车机器人.g.resources
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.2\obj\Debug\Indoor Helper Robot.csproj.GenerateResource.Cache
