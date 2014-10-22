@@ -71,7 +71,6 @@ C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor\obj\Debug\乐高停
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\bin\Debug\乐高停车机器人.exe.config
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.exe
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.pdb
-<<<<<<< HEAD
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\bin\Debug\乐高停车机器人.exe
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\bin\Debug\乐高停车机器人.pdb
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\bin\Debug\LibUsbDotNet.dll
@@ -88,5 +87,4 @@ C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\Wp
 C:\Users\user\Documents\GitHub\Final-Year-Project\Controllor-v1.000\obj\Debug\乐高停车机器人.csproj.GenerateResource.Cache
 =======
 >>>>>>> parent of f667705... fetch arm add
-=======
 >>>>>>> parent of c2c3f10... error??
