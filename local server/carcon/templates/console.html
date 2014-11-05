@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-md-6 col-lg-8" id="image">
+    <h2>Camera</h2>
+    <img id="tumbnail" class="img-thumbnail" src="{{ url_for('get_image') }}" name="screen" />
+  </div>
+
+  <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-0" id="controller">
+    <h2>Controller</h2>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4 ">
+          <button id="btn-up" type="button" class="btn btn-success btn-lg"
+              data-url="cmd/up" title="Forward / Accelerate">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <button id="btn-left" type="button" class="btn btn-success btn-lg"
+              data-url="cmd/left" title="Turn left">
+            <span class="glyphicon glyphicon-share-alt"></span>
+          </button>
+        </div>
+        <div class="col-xs-4">
+          <button id="btn-stop" type="button" class="btn btn-warning btn-lg shake" 
+            data-url="cmd/stop" title="Stop">
+            <span class="glyphicon glyphicon-minus-sign"></span>
+          </button>
+        </div>
+        <div class="col-xs-4">
+          <button id="btn-right" type="button" class="btn btn-success btn-lg"
+            data-url="cmd/right" title="Turn right">
+            <span class="glyphicon glyphicon-share-alt"></span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+          <button id="btn-down" type="button" class="btn btn-success btn-lg" 
+            data-url="cmd/down" title="Decelerate / Reversing">
+            <span class="glyphicon glyphicon-arrow-down"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div><!--/#controller-->
+</div><!--/.row-->
+{% endblock %}

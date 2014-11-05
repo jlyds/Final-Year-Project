@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  padding-top: 50px;
+}
+
+div#controller{
+	width:auto;
+	height:auto;
+	/*border:#F00 2px solid;*/
+}
+
+td{ text-align:center;}
+
+#controlPenal{
+	margin:10px;
+}
+
+#tumbnail { width: 100%; }
+
+#content { margin-top: 1em; }
+#controller button { font-size: 2em; }
+#controller .row { margin-top: 1em; }
+#controller .jumbotron { padding: 3em; text-align: center; }
+
+#btn-up { transition: 0.5s; position: relative; top: 0; }
+#btn-up:hover { top: -10px; }
+#btn-left { float: right; transform: rotateY(180deg); transition: 0.5s; }
+#btn-left:hover { transform: rotateY(180deg) rotate(15deg); }
+#btn-right { float: left; transition: 0.5s; }
+#btn-right:hover { transform: rotate(15deg); }
+#btn-down { transition: 0.5s; position: relative; top: 0; }
+#btn-down:hover { top: 10px; }
+
+
+/*#btn-right, #btn-left { animation: 10s linear rikka; }
+*/
+@keyframes rikka {
+    100% { transform: rotate(5000deg); }
+}
